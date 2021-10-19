@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VendingMachine.Model
 {
-    public abstract class ProductItem 
+    public abstract class ProductItem : IVending
     {
         public string ProductName { get; set; }
 
