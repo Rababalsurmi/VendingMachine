@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-// ProductItem = Parent (Abstact class) and Drinks = child
-
 namespace VendingMachine.Model
 {
+    // ProductItem = Parent (Abstact class) and Drinks = child
     public class Drinks : ProductItem
     {
         public const string Message = "Drinking... Yum! ";
