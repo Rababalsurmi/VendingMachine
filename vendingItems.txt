@@ -1,0 +1,20 @@
+﻿A1 | OLW Salt & Vinegar | 3.05 |Crisps
+A2 | OLW Sourcream & Onions | 0.85 |Crisps
+A3 | OLW Grill | 2.75 | Crisps
+A4 | Estrella Dill | 3.65 | Crisps
+A5 | Estrella Ranch | 3.25 | Crisps
+B1 | Marabou|1.80|Chocolate
+B2 | Twix | 1.50 | Chocolate
+B3 | Kit - Kat | 1.50 | Chocolate
+B4 | Snickers | 1.75 | Chocolate
+B5 | Kinder Egg | 1.25 | Chocolate
+C1 | Cold Coffee Latte | 1.50 | Drinks
+C2 | Iced Tea | 1.50 | Drinks
+C3 | Diet Sprite| 1.55 | Drinks
+C4 | Fanta Exotic | 1.50 | Drinks
+C5 | Coca Cola | 1.50 | Drinks
+D1 | Peacans | 0.85 | Nuts
+D2 | Walnuts | 0.95 | Nuts
+D3 | Almonds | 0.75 | Nuts
+D4 | Cashews | 0.95 | Nuts
+D5 | Peanuts | 0.75 | Nuts
