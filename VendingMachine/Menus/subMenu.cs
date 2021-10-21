@@ -39,34 +39,53 @@ namespace VendingMachine.Menus
                     Console.WriteLine("Choose one of the fixed denominations");
                     Console.WriteLine();
 
-                    while (true)
+                    bool running = true;
+                    while (running)
                     {
                         Console.WriteLine("1kr, 5kr, 10kr, 20kr, 50kr, 100kr, 500kr or 1000kr");
                         string amountToInsert = Console.ReadLine();
 
-                        if (amountToInsert == "1kr"
-                            || amountToInsert == "5kr"
-                            || amountToInsert == "10kr"
-                            || amountToInsert == "20kr"
-                            || amountToInsert == "50kr"
-                            || amountToInsert == "100kr"
-                            || amountToInsert == "500kr"
-                            || amountToInsert == "1000kr")
+                        switch (amountToInsert)
                         {
-                            VendingM.InsertMoney(amountToInsert);
-                            Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
-                            //if (!VendingM.InsertMoney(amountToInsert))
-                            //{
+                            case "1":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "5":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "10":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "20":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "50":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "100":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "500":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            case "1000":
+                                VendingM.InsertMoney(amountToInsert);
+                                Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
+                                break;
+                            default:
                                 
-                            //    //Console.WriteLine("Insert a valid amount.");
-                            //}
-                            //else
-                            //{
-                            //    //Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
-                            //    Console.WriteLine("Insert a valid amount.");
-                            //    break;
-                            //}
+                                break;
+
                         }
+                        running = false;
+
                     }
                 }
                 else if (input == "2")
