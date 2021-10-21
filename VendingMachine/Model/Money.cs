@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VendingMachine.Model
 {
-    public class Money : IVending
+    public class Money 
     {
         private MoneyTracker track;
 

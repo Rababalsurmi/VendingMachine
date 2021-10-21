@@ -8,6 +8,10 @@ namespace VendingMachine.Model
     {
         bool InsertMoney(string amount);
 
+        string ShowAll();
+
+        bool Purchase(string itemNumber);
+
         string EndTransaction();
 
     }
