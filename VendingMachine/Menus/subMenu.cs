@@ -22,8 +22,9 @@ namespace VendingMachine.Menus
                 Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine("Choose from the following options:");
+                Console.WriteLine();
                 Console.WriteLine("1] >> Insert Money");
-                Console.WriteLine("2] >> Select Product");
+                Console.WriteLine("2] >> Purchase Product");
                 Console.WriteLine("3] >> End Transaction");
                 Console.WriteLine("Q] >> Return to Main Menu");
                 Console.WriteLine();
@@ -93,12 +94,15 @@ namespace VendingMachine.Menus
                     while (true)
                     {
                         VendingM.ShowAll();
-                        Console.Write(">>> What item do you want? ");
+                        Console.WriteLine();
+                        Console.Write(">>> Choose your Snack Number:  ");
                         string choice = Console.ReadLine();
 
-                        if (this.VendingM.ItemExists(choice) && VendingM.Purchase(choice))
+                        if (VendingM.ItemExists(choice) && VendingM.Purchase(choice))
                         {
+                            Console.WriteLine();
                             Console.WriteLine($"Enjoy your {VendingM.VendingMachineItems[choice].ProductName}\n{VendingM.VendingMachineItems[choice].VendedMessage}");
+                            Console.WriteLine();
                             break;
                         }
                         else if (!VendingM.ItemExists(choice))
@@ -108,10 +112,12 @@ namespace VendingMachine.Menus
                         }
                         else if (VendingM.ItemExists(choice) && VendingM.MoneyInMachine > VendingM.VendingMachineItems[choice].Price)
                         {
+                            Console.WriteLine();
                             Console.WriteLine(VendingM.VendingMachineItems[choice].SoldOutMessage);
                         }
                         else if (VendingM.MoneyInMachine < VendingM.VendingMachineItems[choice].Price)
                         {
+                            Console.WriteLine();
                             Console.WriteLine(VendingM.NotEnoughMoneyError);
                             break;
                         }

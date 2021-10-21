@@ -8,7 +8,7 @@ namespace VendingMachine.Model
     {
         bool InsertMoney(string amount);
 
-        string ShowAll();
+        void ShowAll();
 
         bool Purchase(string itemNumber);
 

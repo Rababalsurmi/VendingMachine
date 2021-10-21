@@ -34,11 +34,11 @@ namespace VendingMachine.Model
             this.track = track;
         }
 
-        public string ShowAll()
+        public void ShowAll()
         {
-            string result = string.Empty;
+            //string result = string.Empty;
 
-            Console.WriteLine($"\n\n{"#".PadRight(5)} {"Stock"} { "Product".PadRight(20) } { "Price".PadLeft(7)}");
+            Console.WriteLine($"\n\n{"#".PadRight(5)} {"Stock"} { "Product".PadRight(30) } { "Price".PadLeft(7)}");
 
             foreach (KeyValuePair<string, ProductItem> kvp in VendingMachineItems)
             {
@@ -46,20 +46,20 @@ namespace VendingMachine.Model
                 {
                     string itemNumber = kvp.Key.PadRight(5);
                     string itemsRemaining = kvp.Value.RemainingItems.ToString().PadRight(3);
-                    string productName = kvp.Value.ProductName.PadRight(20);
+                    string productName = kvp.Value.ProductName.PadRight(30);
                     string price = kvp.Value.Price.ToString("C").PadLeft(7);
 
-                    result = $"{itemNumber} {itemsRemaining} {productName} Costs: {price} each";
-                    //Console.WriteLine($"{itemNumber} {itemsRemaining} {productName} Costs: {price} each");
+                    //result = $"{itemNumber} {itemsRemaining} {productName} Costs: {price} each";
+                    Console.WriteLine($"{itemNumber} {itemsRemaining} {productName} Costs: {price} each");
                 }
                 else
                 {
-                    result = $"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.";
-                    //Console.WriteLine($"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.");
+                    //result = $"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.";
+                    Console.WriteLine($"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.");
                 }
             }
 
-            return result;
+            //return result;
         }
 
         public bool InsertMoney(string amount)
