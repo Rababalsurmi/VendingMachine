@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using VendingMachine.Model;
+using VendingMachine.Menus;
 
 namespace VendingMachine
 {
@@ -12,7 +13,8 @@ namespace VendingMachine
         {
             Console.WriteLine("Hello World!");
 
-
+            MainMenu menu = new MainMenu();
+            menu.Display();
         }
     }
 }

@@ -7,8 +7,10 @@
 
   <ItemGroup>
     <None Remove="Model\" />
+    <None Remove="Menus\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Menus\" />
   </ItemGroup>
 </Project>
