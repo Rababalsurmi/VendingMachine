@@ -22,7 +22,7 @@ namespace VendingMachine.Model
 
             if (!decimal.TryParse(amount, out decimal amountInserted))
             {
-                //amountInserted = 0M;
+                amountInserted = 0M;
                 return false;
             }
 
@@ -51,6 +51,37 @@ namespace VendingMachine.Model
             decimal before = MoneyInMachine;
 
             if(MoneyInMachine > 0 )
+            {
+                MoneyInMachine -= amountToRemove;
+
+                result = $"Your change is ";
+                result += $"{MoneyInMachine}";
+
+                //To track money pool after transaction
+                decimal after = MoneyInMachine;
+
+                //Tracking current money
+                track.Track(message, before, after);
+            }
+            else
+            {
+                result = "No money to return";
+            }
+
+            return result;
+        }
+
+        public string EndTransaction(decimal amountToRemove, decimal MoneyInMachine)
+        {
+            string result = string.Empty;
+            //amountToRemove = 0M;
+
+            string message = $"End Transaction: ";
+
+            //To track money pool before transaction
+            decimal before = MoneyInMachine;
+
+            if (MoneyInMachine > 0)
             {
                 MoneyInMachine -= amountToRemove;
 
