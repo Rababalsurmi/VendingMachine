@@ -14,14 +14,6 @@ namespace VendingMachine.Menus
             this.VendingM = VendingM;
         }
 
-        //public static void PrintIndexAndValues(int[] array)
-        //{
-        //    for (int i = 0; i < array.Length; i++)
-        //    {
-        //        Console.WriteLine("  {0} Kr", array[i]);
-        //    }
-        //    Console.WriteLine();
-        //}
         public static void PrintIndexAndValues(IList<int> myList)
         {
             for (int i = 0; i < myList.Count; i++)
