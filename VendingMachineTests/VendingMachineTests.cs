@@ -53,12 +53,63 @@ namespace VendingMachineTests
         [Fact]
         public void ShowAllTest()
         {
-            MethodsVendingMachine items = new MethodsVendingMachine();
-            
-            var actual = items.ShowAll();
+            MethodsVendingMachine showItems = new MethodsVendingMachine();
+            try
+            {
+                showItems.ShowAll();
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.True(false);
+            }
+        }
 
-            Assert.NotEmpty(actual);
-            
+        [Fact]
+        public void ExamineTest()
+        {
+            MethodsVendingMachine showItems = new MethodsVendingMachine();
+            try
+            {
+                showItems.Examine();
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.True(false);
+            }
+        }
+
+        [Fact]
+        public void ItemExistsTest()
+        {
+            MethodsVendingMachine showItems = new MethodsVendingMachine();
+            string itemNumber = "A1";
+            try
+            {
+                showItems.ItemExists(itemNumber);
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.True(false);
+            }
+        }
+
+        [Fact]
+        public void UseTest()
+        {
+            MethodsVendingMachine showItems = new MethodsVendingMachine();
+            string choice = "A1";
+            try
+            {
+                showItems.Use(choice);
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.True(false);
+            }
         }
     }
 }
