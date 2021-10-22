@@ -38,5 +38,36 @@ namespace VendingMachine.Model
 
             return items;
         }
+
+        public List< ProductItem> ShowVendingItems()
+        {
+            List<ProductItem> items = new List<ProductItem>();
+
+            items.Add(new Drinks("Cold Coffee Latte Beverage"));
+            items.Add(new Drinks("Iced Tea Beverage"));
+            items.Add(new Drinks("Diet Sprite Beverage"));
+            items.Add( new Drinks("Fanta Exotic Beverage"));
+            items.Add( new Drinks("Coca Cola Beverage"));
+
+            items.Add(new Chocolate("Kit Kat Chocolate bar"));
+            items.Add(new Chocolate("Snickers Chocolate bar"));
+            items.Add(new Chocolate("Twix Chocolate bar"));
+            items.Add(new Chocolate("Kinder Egg Chocolate"));
+            items.Add(new Chocolate("Marabou Chocolate bar"));
+
+            items.Add(new Nuts("Peanuts Nuts"));
+            items.Add(new Nuts("Cashews Nuts"));
+            items.Add(new Nuts("Almonds Nuts"));
+            items.Add(new Nuts("Walnuts Nuts"));
+            items.Add(new Nuts("Peacans Nuts"));
+
+            items.Add(new Crisps("OLW Salt & Vinegar Chips"));
+            items.Add(new Crisps("OLW Sourcream & Onions Chips"));
+            items.Add(new Crisps("OLW Grill Chips"));
+            items.Add(new Crisps("Estrella Dill Chips"));
+            items.Add(new Crisps("Estrella Ranch Chips"));
+
+            return items;
+        }
     }
 }

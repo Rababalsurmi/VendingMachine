@@ -36,6 +36,22 @@ namespace VendingMachine.Model
 
         public void ShowAll()
         {
+            List<ProductItem> showItems = new List<ProductItem>();
+
+            showItems = LoadItems.ShowVendingItems();
+            
+            Console.WriteLine($"\n{ "Product".PadLeft(15) }");
+            Console.WriteLine("----------------------------");
+
+            foreach (ProductItem item in showItems)
+            {
+                string productName = item.ProductName;
+                Console.WriteLine($"{productName.PadLeft(10)}");
+            }
+        }
+
+        public void Examine()
+        {
             //string result = string.Empty;
 
             Console.WriteLine($"\n\n{"#".PadRight(5)} {"Stock"} { "Product".PadRight(30) } { "Price".PadLeft(7)}");
@@ -184,6 +200,13 @@ namespace VendingMachine.Model
             {
                 return false;
             }
+        }
+
+        public void Use(string choice)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"Enjoy your {VendingMachineItems[choice].ProductName}\n{VendingMachineItems[choice].VendedMessage}");
+            Console.WriteLine();
         }
     }
 }

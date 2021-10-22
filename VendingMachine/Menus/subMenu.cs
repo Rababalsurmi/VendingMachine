@@ -13,6 +13,7 @@ namespace VendingMachine.Menus
         {
             this.VendingM = VendingM;
         }
+       
 
         public void Display()
         {
@@ -30,11 +31,12 @@ namespace VendingMachine.Menus
                 Console.WriteLine();
                 Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
                 Console.WriteLine();
-                Console.Write("Select an Option: ");
+                Console.Write("Select an Option then Press Enter: ");
                 string input = Console.ReadLine();
 
                 if (input == "1")
                 {
+                    Console.WriteLine();
                     Console.WriteLine(">>> How much do you want to insert?");
                     Console.WriteLine();
                     Console.WriteLine("Choose one of the fixed denominations");
@@ -81,7 +83,11 @@ namespace VendingMachine.Menus
                                 Console.WriteLine($"Money in Machine: {VendingM.MoneyInMachine.ToString("C")}");
                                 break;
                             default:
-                                
+
+                                Console.WriteLine();
+                                Console.WriteLine("** Invalid denominations **");
+                                Console.WriteLine();
+                                Console.WriteLine("** Try Again **");
                                 break;
 
                         }
@@ -93,16 +99,15 @@ namespace VendingMachine.Menus
                 {
                     while (true)
                     {
-                        VendingM.ShowAll();
+                        VendingM.Examine();
                         Console.WriteLine();
-                        Console.Write(">>> Choose your Snack Number:  ");
+                        Console.Write(">>> Choose Product Number in Upper Case:  ");
                         string choice = Console.ReadLine();
 
                         if (VendingM.ItemExists(choice) && VendingM.Purchase(choice))
                         {
-                            Console.WriteLine();
-                            Console.WriteLine($"Enjoy your {VendingM.VendingMachineItems[choice].ProductName}\n{VendingM.VendingMachineItems[choice].VendedMessage}");
-                            Console.WriteLine();
+                            VendingM.Use(choice);
+                           
                             break;
                         }
                         else if (!VendingM.ItemExists(choice))

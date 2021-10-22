@@ -12,5 +12,8 @@ namespace VendingMachine.Model
         public Drinks(string productName, decimal price, int remainingitems):base(productName, price, remainingitems, Message)
         {
         }
+        public Drinks(string productName) : base(productName)
+        {
+        }
     }
 }

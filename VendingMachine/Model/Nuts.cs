@@ -12,5 +12,9 @@ namespace VendingMachine.Model
         public Nuts(string productName, decimal price, int remainingitems) : base(productName, price, remainingitems, Message)
         {
         }
+
+        public Nuts(string productName) : base(productName)
+        {
+        }
     }
 }

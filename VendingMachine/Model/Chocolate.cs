@@ -11,6 +11,10 @@ namespace VendingMachine.Model
 
         public Chocolate(string productName, decimal price, int remainingitems) : base(productName, price, remainingitems, Message)
         {
-        } 
+        }
+
+        public Chocolate(string productName) : base(productName)
+        {
+        }
     }
 }

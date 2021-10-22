@@ -12,5 +12,9 @@ namespace VendingMachine.Model
         public Crisps(string productName, decimal price, int remainingitems) : base(productName, price, remainingitems, Message)
         {
         }
+
+        public Crisps(string productName) : base(productName)
+        {
+        }
     }
 }

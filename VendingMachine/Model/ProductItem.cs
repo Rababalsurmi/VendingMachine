@@ -22,6 +22,11 @@ namespace VendingMachine.Model
 
         }
 
+        public ProductItem(string productName)
+        {
+            ProductName = productName;
+        }
+
         public ProductItem(string productName, decimal price, int remainingitems, string vendedMessage)
         {
             ProductName = productName;
