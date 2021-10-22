@@ -13,7 +13,24 @@ namespace VendingMachine.Menus
         {
             this.VendingM = VendingM;
         }
-       
+
+        //public static void PrintIndexAndValues(int[] array)
+        //{
+        //    for (int i = 0; i < array.Length; i++)
+        //    {
+        //        Console.WriteLine("  {0} Kr", array[i]);
+        //    }
+        //    Console.WriteLine();
+        //}
+        public static void PrintIndexAndValues(IList<int> myList)
+        {
+            for (int i = 0; i < myList.Count; i++)
+            {
+                Console.WriteLine("  {0} Kr", myList[i]);
+            }
+            Console.WriteLine();
+        }
+
 
         public void Display()
         {
@@ -45,7 +62,12 @@ namespace VendingMachine.Menus
                     bool running = true;
                     while (running)
                     {
-                        Console.WriteLine("1kr, 5kr, 10kr, 20kr, 50kr, 100kr, 500kr or 1000kr");
+                        //Console.WriteLine("1kr, 5kr, 10kr, 20kr, 50kr, 100kr, 500kr or 1000kr");
+                        int[] denominations = new int[] { 1, 5, 10, 20, 50, 100, 500, 1000 };
+                        IList<int> myDenominations = Array.AsReadOnly(denominations);
+                        PrintIndexAndValues(myDenominations);
+                        
+
                         string amountToInsert = Console.ReadLine();
 
                         switch (amountToInsert)
