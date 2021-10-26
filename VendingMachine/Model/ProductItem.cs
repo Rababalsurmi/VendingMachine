@@ -45,5 +45,10 @@ namespace VendingMachine.Model
             }
             return false;
         }
+        public string Info()
+        {
+            return $"\n{ProductName}";
+        }
+        
     }
 }
