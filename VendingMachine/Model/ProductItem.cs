@@ -11,6 +11,8 @@ namespace VendingMachine.Model
 
         protected string[] products;
 
+        public string ItemNumber { get; set; }
+
         public string ProductName { get; set; }
 
         public decimal Price { get; set; }
@@ -54,6 +56,29 @@ namespace VendingMachine.Model
             Array.Resize(ref products, products.Length + 1);
             products[products.Length - 1] = newProduct;
         }
+        //public void Examine()
+        //{
+        //    Console.WriteLine($"\n\n{"#".PadRight(5)} {"Stock"} { "Product".PadRight(30) } { "Price".PadLeft(7)}");
+
+        //    foreach (ProductItem item in products)
+        //    {
+        //        if (item.RemainingItems > 0)
+        //        {
+        //            string itemNumber = item.ItemNumber.PadRight(5);
+        //            string itemsRemaining = item.RemainingItems.ToString().PadRight(3);
+        //            string productName = item.ProductName.PadRight(30);
+        //            string price = item.Price.ToString("C").PadLeft(7);
+
+        //            //result = $"{itemNumber} {itemsRemaining} {productName} Costs: {price} each";
+        //            Console.WriteLine($"{itemNumber} {itemsRemaining} {productName} Costs: {price} each");
+        //        }
+        //        else
+        //        {
+        //            //result = $"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.";
+        //            Console.WriteLine($"{item.ItemNumber}: {item.ProductName} IS SOLD OUT.");
+        //        }
+        //    }
+        //}
 
         public void Examine()
         {
@@ -79,6 +104,12 @@ namespace VendingMachine.Model
             }
         }
 
+        //public void Use(int choice)
+        //{
+        //    Console.WriteLine();
+        //    Console.WriteLine($"Enjoy your {products[choice].ProductName}\n{products[choice].VendedMessage}");
+        //    Console.WriteLine();
+        //}
         public void Use(string choice)
         {
             Console.WriteLine();

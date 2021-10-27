@@ -8,6 +8,37 @@ namespace VendingMachine.Model
 {
     public class LoadingItems
     {
+        //public ProductItem[] GetVendingItems()
+        //{
+        //    Chocolate kitKat = new Chocolate("Kit Kat Chocolate bar", 1.50M, 5);
+        //    Chocolate snickers = new Chocolate("Snickers Chocolate bar", 1.25M, 4);
+        //    Chocolate twix = new Chocolate("Twix Chocolate bar", 1.55M, 5);
+        //    Chocolate kinder = new Chocolate("Kinder Egg Chocolate", 2.55M, 8);
+        //    Chocolate marabou = new Chocolate("Marabou Chocolate bar", 3.55M, 9);
+
+        //    Drinks coffee = new Drinks("Cold Coffee Latte Beverage", 3.05M, 5);
+        //    Drinks tea = new Drinks("Iced Tea Beverage", 1.50M, 5);
+        //    Drinks sprite = new Drinks("Diet Sprite Beverage", 1.55M, 5);
+        //    Drinks fanta = new Drinks("Fanta Exotic Beverage", 2.55M, 5);
+        //    Drinks cola = new Drinks("Coca Cola Beverage", 1.55M, 5);
+
+        //    Nuts peanuts = new Nuts("Peanuts Nuts", 2.50M, 6);
+        //    Nuts cashews = new Nuts("Cashews Nuts", 2.55M, 5);
+        //    Nuts almonds = new Nuts("Almonds Nuts", 1.50M, 3);
+        //    Nuts walnuts = new Nuts("Walnuts Nuts", 1.25M, 10);
+        //    Nuts peacans = new Nuts("Peacans Nuts", 2.55M, 5);
+
+        //    Crisps saltAndVinegar = new Crisps("OLW Salt & Vinegar Chips", 2.50M, 6);
+        //    Crisps sourcream = new Crisps("OLW Sourcream & Onions Chips", 2.55M, 5);
+        //    Crisps grill = new Crisps("OLW Grill Chips", 1.50M, 3);
+        //    Crisps dill = new Crisps("Estrella Dill Chips", 1.25M, 2);
+        //    Crisps ranch = new Crisps("Estrella Ranch Chips", 2.55M, 7);
+
+        //    ProductItem[] items = new ProductItem[] { kitKat, snickers, twix, kinder, marabou, coffee, tea, sprite, fanta, cola, peanuts, cashews, almonds, walnuts, peacans, saltAndVinegar, sourcream, grill, dill, ranch};
+
+        //    return items;
+        //}
+
         public Dictionary<string, ProductItem> GetVendingItems()
         {
             Dictionary<string, ProductItem> items = new Dictionary<string, ProductItem>();

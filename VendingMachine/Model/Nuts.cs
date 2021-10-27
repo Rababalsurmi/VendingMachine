@@ -7,7 +7,7 @@ namespace VendingMachine.Model
     // ProductItem = Parent (Abstact class) and Nuts = child
     public class Nuts : ProductItem
     {
-        ProductItem[] productList;
+        string[] productList;
 
         int energy;
         public int Energy { get { return energy; } set { energy = value; } }
@@ -30,13 +30,13 @@ namespace VendingMachine.Model
             Array.Resize(ref products, productList.Length + productToReturn.Length);
 
             int index = products.Length;
-            foreach (ProductItem item in productList)
+            foreach (string item in productList)
             {
                 productToReturn[index] = ProductName;
                 index++;
             }
 
-            return null;
+            return productToReturn;
         }
         
 

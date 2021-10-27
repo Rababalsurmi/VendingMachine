@@ -117,7 +117,9 @@ namespace VendingMachine.Menus
                         Products.Examine();
                         Console.WriteLine();
                         Console.Write(">>> Choose Product Number in Upper Case:  ");
+                        //Console.Write(">>> Choose Product Number:  ");
                         string choice = Console.ReadLine();
+                        //int choice = int.Parse(Console.ReadLine());
 
                         if (VendingM.ItemExists(choice) && VendingM.Purchase(choice))
                         {

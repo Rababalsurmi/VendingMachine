@@ -30,6 +30,9 @@ namespace VendingMachine.Model
         public Chocolate(string productName, int cocoa, decimal sugar, decimal weight) : base(productName)
         {
         }
+        public Chocolate(int cocoa, decimal sugar, decimal weight)
+        {
+        }
 
         public List<ProductItem> ChocolateInfo()
         {
