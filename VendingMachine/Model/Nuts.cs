@@ -7,6 +7,8 @@ namespace VendingMachine.Model
     // ProductItem = Parent (Abstact class) and Nuts = child
     public class Nuts : ProductItem
     {
+        ProductItem[] productList;
+
         int energy;
         public int Energy { get { return energy; } set { energy = value; } }
 
@@ -20,6 +22,23 @@ namespace VendingMachine.Model
         {
             return base.Info() + $"\nCalories from fat: {Energy}  \nProtein: {Protein} g\nCholestrol: {Cholestrol} %";
         }
+
+        public override string[] Products()
+        {
+            string[] productToReturn = new string[products.Length];
+            products.CopyTo(productToReturn, 0);
+            Array.Resize(ref products, productList.Length + productToReturn.Length);
+
+            int index = products.Length;
+            foreach (ProductItem item in productList)
+            {
+                productToReturn[index] = ProductName;
+                index++;
+            }
+
+            return null;
+        }
+        
 
         public const string Message = "Nuts Munching... Yum! ";
 

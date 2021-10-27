@@ -9,6 +9,8 @@ namespace VendingMachine.Model
     {
         public Dictionary<string, ProductItem> VendingMachineItems = new Dictionary<string, ProductItem>();
 
+        protected string[] products;
+
         public string ProductName { get; set; }
 
         public decimal Price { get; set; }
@@ -42,6 +44,15 @@ namespace VendingMachine.Model
         public virtual string Info()
         {
             return $"\n{ProductName}";
+        }
+        public virtual string[] Products()
+        {
+            return products;
+        }
+        public void AddInfo(string newProduct)
+        {
+            Array.Resize(ref products, products.Length + 1);
+            products[products.Length - 1] = newProduct;
         }
 
         public void Examine()
