@@ -8,6 +8,7 @@ namespace VendingMachine.Menus
     public class SubMenu
     {
         private MethodsVendingMachine VendingM;
+        private ProductItem Products;
 
         public SubMenu(MethodsVendingMachine VendingM)
         {
@@ -113,14 +114,14 @@ namespace VendingMachine.Menus
                 {
                     while (true)
                     {
-                        VendingM.Examine();
+                        Products.Examine();
                         Console.WriteLine();
                         Console.Write(">>> Choose Product Number in Upper Case:  ");
                         string choice = Console.ReadLine();
 
                         if (VendingM.ItemExists(choice) && VendingM.Purchase(choice))
                         {
-                            VendingM.Use(choice);
+                            Products.Use(choice);
                            
                             break;
                         }

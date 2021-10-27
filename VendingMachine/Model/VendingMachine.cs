@@ -40,42 +40,15 @@ namespace VendingMachine.Model
 
             showItems = LoadItems.ShowVendingItems();
             
-            Console.WriteLine($"\n{ "Product".PadLeft(15) }");
+            Console.WriteLine($"\n{ "Product Nutrition Facts:".PadLeft(15) }");
             Console.WriteLine("----------------------------");
-
+            
             foreach (ProductItem item in showItems)
             {
-                string productName = item.ProductName;
-                Console.WriteLine($"{productName.PadLeft(10)}");
+                string productInfo = item.Info();
+
+                Console.WriteLine($"\n{productInfo}");
             }
-        }
-
-        public void Examine()
-        {
-            //string result = string.Empty;
-
-            Console.WriteLine($"\n\n{"#".PadRight(5)} {"Stock"} { "Product".PadRight(30) } { "Price".PadLeft(7)}");
-
-            foreach (KeyValuePair<string, ProductItem> kvp in VendingMachineItems)
-            {
-                if (kvp.Value.RemainingItems > 0)
-                {
-                    string itemNumber = kvp.Key.PadRight(5);
-                    string itemsRemaining = kvp.Value.RemainingItems.ToString().PadRight(3);
-                    string productName = kvp.Value.ProductName.PadRight(30);
-                    string price = kvp.Value.Price.ToString("C").PadLeft(7);
-
-                    //result = $"{itemNumber} {itemsRemaining} {productName} Costs: {price} each";
-                    Console.WriteLine($"{itemNumber} {itemsRemaining} {productName} Costs: {price} each");
-                }
-                else
-                {
-                    //result = $"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.";
-                    Console.WriteLine($"{kvp.Key}: {kvp.Value.ProductName} IS SOLD OUT.");
-                }
-            }
-
-            //return result;
         }
 
         public bool InsertMoney(string amount)
@@ -164,7 +137,6 @@ namespace VendingMachine.Model
             return result;
         }
 
-
         public bool ItemExists(string itemNumber)
         {
             return VendingMachineItems.ContainsKey(itemNumber);
@@ -200,13 +172,6 @@ namespace VendingMachine.Model
             {
                 return false;
             }
-        }
-
-        public void Use(string choice)
-        {
-            Console.WriteLine();
-            Console.WriteLine($"Enjoy your {VendingMachineItems[choice].ProductName}\n{VendingMachineItems[choice].VendedMessage}");
-            Console.WriteLine();
         }
     }
 }

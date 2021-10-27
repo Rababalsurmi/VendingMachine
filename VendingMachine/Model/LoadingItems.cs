@@ -43,29 +43,29 @@ namespace VendingMachine.Model
         {
             List<ProductItem> items = new List<ProductItem>();
 
-            items.Add(new Drinks("Cold Coffee Latte Beverage"));
-            items.Add(new Drinks("Iced Tea Beverage"));
-            items.Add(new Drinks("Diet Sprite Beverage"));
-            items.Add( new Drinks("Fanta Exotic Beverage"));
-            items.Add( new Drinks("Coca Cola Beverage"));
+            items.Add(new Drinks("Cold Coffee Latte Beverage", 120, 14.0M, 11.0M));
+            items.Add(new Drinks("Iced Tea Beverage", 100, 25.0M, 30.0M));
+            items.Add(new Drinks("Diet Sprite Beverage", 0, 0M, 1.0M));
+            items.Add( new Drinks("Fanta Exotic Beverage", 175, 13.0M, 0M));
+            items.Add( new Drinks("Coca Cola Beverage", 140, 39.0M, 1.0M));
 
-            items.Add(new Chocolate("Kit Kat Chocolate bar"));
-            items.Add(new Chocolate("Snickers Chocolate bar"));
-            items.Add(new Chocolate("Twix Chocolate bar"));
-            items.Add(new Chocolate("Kinder Egg Chocolate"));
-            items.Add(new Chocolate("Marabou Chocolate bar"));
+            items.Add(new Chocolate("Kit Kat Chocolate bar", 45, 7.1M, 15.4M));
+            items.Add(new Chocolate("Snickers Chocolate bar", 30, 30.0M, 57.0M));
+            items.Add(new Chocolate("Twix Chocolate bar", 49, 27.0M, 50.7M));
+            items.Add(new Chocolate("Kinder Egg Chocolate", 29, 53.3M, 100.0M));
+            items.Add(new Chocolate("Marabou Chocolate bar", 45, 23.8M, 250.0M));
 
-            items.Add(new Nuts("Peanuts Nuts"));
-            items.Add(new Nuts("Cashews Nuts"));
-            items.Add(new Nuts("Almonds Nuts"));
-            items.Add(new Nuts("Walnuts Nuts"));
-            items.Add(new Nuts("Peacans Nuts"));
+            items.Add(new Nuts("Peanuts Nuts", 170, 7.1M, 0M));
+            items.Add(new Nuts("Cashews Nuts", 160, 3.0M, 0M));
+            items.Add(new Nuts("Almonds Nuts", 170, 7.1M, 0M));
+            items.Add(new Nuts("Walnuts Nuts", 185, 4M, 0M));
+            items.Add(new Nuts("Peacans Nuts", 181, 2.6M, 0M));
 
-            items.Add(new Crisps("OLW Salt & Vinegar Chips"));
-            items.Add(new Crisps("OLW Sourcream & Onions Chips"));
-            items.Add(new Crisps("OLW Grill Chips"));
-            items.Add(new Crisps("Estrella Dill Chips"));
-            items.Add(new Crisps("Estrella Ranch Chips"));
+            items.Add(new Crisps("OLW Salt & Vinegar Chips", 7.7M, 12.1M, 0M));
+            items.Add(new Crisps("OLW Sourcream & Onions Chips", 9.7M, 11.1M, 0M));
+            items.Add(new Crisps("OLW Grill Chips", 5.7M, 10.1M, 0M));
+            items.Add(new Crisps("Estrella Dill Chips", 33.8M, 1.7M, 0.8M));
+            items.Add(new Crisps("Estrella Ranch Chips", 33.8M, 1.7M, 2.9M));
 
             return items;
         }

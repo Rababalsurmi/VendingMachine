@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VendingMachine.Model
 {
-    public class Money 
+    public class Money
     {
         private MoneyTracker track;
 
@@ -17,7 +17,7 @@ namespace VendingMachine.Model
             this.track = track;
         }
 
-        public bool InsertMoney (string amount)
+        public bool InsertMoney(string amount)
         {
 
             if (!decimal.TryParse(amount, out decimal amountInserted))
@@ -50,7 +50,7 @@ namespace VendingMachine.Model
             //To track money pool before transaction
             decimal before = MoneyInMachine;
 
-            if(MoneyInMachine > 0 )
+            if (MoneyInMachine > 0)
             {
                 MoneyInMachine -= amountToRemove;
 
